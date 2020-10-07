@@ -1,0 +1,30 @@
+@charset "UTF-8";
+
+.main {
+	padding: 50px 0 50px 0;
+}
+
+.header {
+	background-color: gray;
+}
+
+.header-contents {
+	display: inline-block;
+	padding: 10px;
+	color: white;
+}
+
+.header-date {
+	padding: 10px;
+	font-size: 10px;
+}
+
+.footer {
+	background-color: gray;
+}
+
+.footer-contents {
+	display: inline-block;
+	padding: 10px;
+	color: white;
+}
