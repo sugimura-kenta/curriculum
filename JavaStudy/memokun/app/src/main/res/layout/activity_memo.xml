@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <EditText
+        android:id="@+id/etTitle"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.1"
+        android:layout_gravity="center"
+        android:autofillHints="@string/hints_title"
+        android:inputType="text"
+        android:textSize="30sp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:id="@+id/line_horizontal"
+        android:layout_margin="3dp"
+        android:background="@color/black"/>
+
+    <com.websarva.wimgs.android.memokun.LinedEditText
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.8"
+        android:importantForAutofill="no"
+        android:inputType="textMultiLine"
+        android:id="@+id/etNote"
+        android:gravity="top|left"
+        android:textSize="24sp"
+        android:background="#fafad2"
+        />
+
+    <Button
+        android:id="@+id/btnSave"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.1"
+        android:onClick="onSaveButtonClick"
+        android:text="@string/btn_name"
+        android:textSize="30sp"/>
+
+</LinearLayout>

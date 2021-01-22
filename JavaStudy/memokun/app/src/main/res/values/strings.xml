@@ -1,0 +1,14 @@
+<?xml version ="1.0" encoding ="utf-8" ?>
+<resources>
+    <string name="app_name">メモ帳</string>
+    <string name="btn_name">保存</string>
+    <string name="menu_icon_add">追加</string>
+    <string name="menu_icon_remove">削除</string>
+    <string name="hints_title">メモタイトル</string>
+    <string name="hints_note">メモ記入欄</string>
+    <string name="insert">INSERT INTO memokun (name,note) VALUES(?,?)</string>
+    <string name="db_selectAll">select * from memokun </string>
+    <string name="db_selectName">SELECT * FROM memokun WHERE name = </string>
+    <string name="db_DELETE_INSERT_delete">DELETE FROM memokun WHERE name = ?</string>
+    <string name="db_DELETE_INSERT_insert">INSERT INTO memokun (name,note) VALUES(?,?)</string>
+</resources>
