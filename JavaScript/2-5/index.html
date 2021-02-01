@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table {
+            font-size: 1.5em;
+            text-align: center;
+        }
+
+        th, td {
+            padding : 10px;
+        }
+
+    </style>
+</head>
+<body>
+    <select id="selectop" onchange="changeLang()">
+        <option id="select">選択してください</option>
+        <option id="selected_jpn">日本語</option>
+        <option id="selected_en">English</option>
+        <option id="selected_all">全て表示</option>
+    </select>
+    <table>
+        <tr id="jpn">
+            <th>日本</th>
+            <td>こんにちは</td>
+            <td>ありがとう</td>
+            <td>さようなら</td>
+        </tr>
+        <tr id="en">
+            <th>English</th>
+            <td>Hello</td>
+            <td>Thank you</td>
+            <td>Good Bye</td>
+        </tr>
+    </table>
+
+    <script>
+        //①onchangeで使用されている関数の中身を実装してください。
+        function changeLang() {
+            
+             const selectop = document.getElementById('selectop').value;
+             const select = document.getElementById('select').value;
+             const jpn = document.getElementById('selected_jpn').value;
+             const en = document.getElementById('selected_en').value;
+             const all = document.getElementById('selected_all').value;
+             const japanese = document.getElementById('jpn');
+             const english = document.getElementById('en'); 
+            
+             console.log("選択された項目："+selectop);
+
+             if(selectop === select){
+                 japanese.style.display = "block";
+                 english.style.display = "block";
+                 console.log("全て表示");
+             }else if (selectop === jpn){
+                 japanese.style.display = "block";
+                 english.style.display = "none";
+                 console.log("日本語のみ表示");
+             }else if(selectop === en) {
+                 japanese.style.display = "none";
+                 english.style.display = "block";
+                 console.log("英語のみ表示");
+             }else if (selectop === all) {
+                 japanese.style.display = "block";
+                 english.style.display = "block";
+                 console.log("全て表示");
+             }
+
+            
+
+
+
+        }
+    
+    
+    </script>
+</body>
+</html>
