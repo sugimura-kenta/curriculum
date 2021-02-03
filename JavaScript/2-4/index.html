@@ -12,16 +12,19 @@
     <br>
     <textarea id="area1" cols="50" rows="8" placeholder="ここに出力されます"></textarea>
     
-    <script>   
+    <script>  
+
     function addText() {
         //①入力欄のテキストを取得
-        let text = document.getElementById('text1');
+
+        let text = document.getElementById('text1').value;
         //②出力欄のテキストエリアを取得
+
         let textarea = document.getElementById('area1');
         //③出力欄に入力された文字列を足していく
-        textarea.value += text.value;
-
-        console.log(text.value);
+        
+        textarea.value += text;
+        console.log(text);
     }
 
     function deleteText() {
