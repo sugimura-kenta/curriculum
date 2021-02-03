@@ -52,7 +52,7 @@
             
              console.log("選択された項目："+selectop);
 
-             if(selectop === select){
+             if(selectop === select && selectop === all){
                  japanese.style.display = "block";
                  english.style.display = "block";
                  console.log("全て表示");
@@ -64,19 +64,9 @@
                  japanese.style.display = "none";
                  english.style.display = "block";
                  console.log("英語のみ表示");
-             }else if (selectop === all) {
-                 japanese.style.display = "block";
-                 english.style.display = "block";
-                 console.log("全て表示");
              }
-
-            
-
-
-
         }
-    
-    
+
     </script>
 </body>
 </html>
