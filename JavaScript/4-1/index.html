@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div id="app">
+        <p>残タスク数：{{ listlenght }}</p>
+        <input type="text" v-model="addText" placeholder="ToDoを入力して">
+        <button v-on:click="addToDo()">追加</button>
+        <button v-on:click="deleteBtn()">削除</button><hr>
+        <input type="text" v-model="search">
+        <ul v-if="search === ''" >
+            <li v-for="todo in list">
+                <span v-bind:class="{ done: todo.isChecked }">
+                    <input type="checkbox" v-model="todo.isChecked">{{ todo.text }}
+                </span>
+            </li>
+        </ul>
+        <ul v-else-if="search !== ''" >
+            <li v-for="todo in searchlist">
+                <span v-bind:class="{ done: todo.isChecked }">
+                    <input type="checkbox" v-model="todo.isChecked">{{ todo.text }}
+                </span>
+            </li>
+        </ul>
+        <!-- リストが0の時に表示 -->
+        <p v-show="list.length === 0">現在タスクはありません</p> 
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
